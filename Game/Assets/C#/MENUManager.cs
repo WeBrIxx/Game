@@ -7,7 +7,7 @@ public class MENUManager : MonoBehaviour
 {
     public void START()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
     public void EXIT()
     {
