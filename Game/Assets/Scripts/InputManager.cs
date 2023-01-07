@@ -15,14 +15,14 @@ public class InputManager : MonoBehaviour
         PlayerInput = new PlayerInput();
         OnFoot = PlayerInput.OnFoot;
         motor = GetComponent<PlayerMotor>();
-        onFoot.Jump.performed += ctx => motor.Jump();
+        OnFoot.Jump.performed += ctx => motor.Jump();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         //tell the playermotor to move using the value from our movement action.
-        motor.ProccesMove(OnFoot.Movement.ReadValue<Vector2>());
+        motor.ProcessMove(OnFoot.Movement.ReadValue<Vector2>());
     }
     private void OnEnable()
     {

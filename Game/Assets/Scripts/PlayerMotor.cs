@@ -21,24 +21,27 @@ public class PlayerMotor : MonoBehaviour
     {
         isGrounded = controller.isGrounded;
     }
+
     //recieve the inputs for our InputManager.cs and apply them to our character controller.
-    public void ProccesMove(Vector2 input)
+    public void ProcessMove(Vector2 input)
     {
-        Vector3 moveDirection = Vector3.zero; 
+        Vector3 moveDirection = Vector3.zero;
         moveDirection.x = input.x;
         moveDirection.z = input.y;
         controller.Move(transform.TransformDirection(moveDirection) * speed * Time.deltaTime);
         playerVelocity.y += gravity * Time.deltaTime;
-        if(isGrounded && playerVelocity.y < 0)
+        if (isGrounded && playerVelocity.y < 0)
             playerVelocity.y = -2f;
         controller.Move(playerVelocity * Time.deltaTime);
         Debug.Log(playerVelocity.y);
     }
-    public void jump()
-}
-{
-    if (isGrounded)
+    public void Jump()
     {
-        playerVelocity.y = Mathf.Sqrt (jumpHeight * -3.0f * gravity);
+        if (isGrounded)
+        {
+            playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);
+        }
+
     }
+
 }
