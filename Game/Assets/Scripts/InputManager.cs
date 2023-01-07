@@ -13,7 +13,7 @@ public class InputManager : MonoBehaviour
     void Awake()
     {
         PlayerInput = new PlayerInput();
-        Onfoot = PlayerInput.OnFoot;
+        OnFoot = PlayerInput.OnFoot;
         motor = GetComponent<PlayerMotor>();
     }
 
@@ -21,7 +21,7 @@ public class InputManager : MonoBehaviour
     void FixedUpdate()
     {
         //tell the playermotor to move using the value from our movement action.
-        motor.ProccesmMove(OnFoot.Movement.ReadValue<Vector2>());
+        motor.ProccesMove(OnFoot.Movement.ReadValue<Vector2>());
     }
     private void OnEnable()
     {
