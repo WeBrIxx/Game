@@ -5,9 +5,9 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    private PlayerInput PlayerInput; 
+    private PlayerInput PlayerInput;
     private PlayerInput.OnFootActions OnFoot;
-    
+
     private PlayerMotor motor;
     private PlayerLook look;
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class InputManager : MonoBehaviour
     }
     private void LateUpdate()
     {
-        look.ProcessLook(OnFoot.look.ReadValue<Vector2>());
+        look.ProcessLook(OnFoot.Look.ReadValue<Vector2>());
     }
     private void OnEnable()
     {
