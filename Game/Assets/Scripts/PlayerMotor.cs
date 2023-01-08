@@ -48,11 +48,7 @@ public class PlayerMotor : MonoBehaviour
             jumpSoundEffect.Play();
             
         } 
-        if moveDirection.x = input.x;
-        {
-            runningSoundEffect.Play();
-        }
 
-        }
+    }
 
 }
