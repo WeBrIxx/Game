@@ -10,6 +10,10 @@ public class PlayerMotor : MonoBehaviour
     public float speed = 6f;
     public float gravity = -9.8f;
     public float jumpHeight = 4f;
+
+    public AudioSource jumpSoundEffect;
+    public AudioSource runningSoundEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,10 +41,13 @@ public class PlayerMotor : MonoBehaviour
     }
     public void Jump()
     {
+        
         if (isGrounded)
         {
             playerVelocity.y = Mathf.Sqrt(jumpHeight * -3.0f * gravity);
-        }
+            jumpSoundEffect.Play();
+            runningSoundEffect.Play();
+        } 
 
     }
 
