@@ -1,0 +1,34 @@
+{
+    "name": "StandardControls",
+    "maps": [
+        {
+            "name": "Gameplay Controls",
+            "id": "b3b5fbce-2aa4-40f2-8108-97e90d143410",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "7d2ba3c6-1a7c-4dac-bec5-08d341a8212d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f0c3c46a-c2b8-4928-9940-8c4ab2bc838c",
+                    "path": "<Keyboard>/#(R)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
